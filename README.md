@@ -2,11 +2,8 @@
 
 > Validate, load, and report on Django environment variables — all in one place.
 
-[![PyPI version](https://img.shields.io/pypi/v/django-env-doctor.svg)](https://pypi.org/project/django-env-doctor/)
-[![Python versions](https://img.shields.io/pypi/pyversions/django-env-doctor.svg)](https://pypi.org/project/django-env-doctor/)
-[![Django versions](https://img.shields.io/pypi/djversions/django-env-doctor.svg)](https://pypi.org/project/django-env-doctor/)
+[![PyPI version](https://badge.fury.io/py/django-env-doctor.svg)](https://pypi.org/project/django-env-doctor/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
 ---
 
 ## The problem
@@ -39,6 +36,18 @@ Every Django developer has hit this at some point:
 - Django system checks integration (`manage.py check`)
 - Multi-environment support — different rules for `dev`, `staging`, `prod`
 - **Zero runtime dependencies**
+
+## How it compares
+
+| Feature | dotenv | django-environ | pydantic-settings | django-env-doctor |
+|---|---|---|---|---|
+| Loads .env | Yes | Yes | Yes | Yes |
+| Type casting | No | Yes | Yes | Yes |
+| Schema declaration | No | Partial | Yes | Yes |
+| CLI health report | No | No | No | Yes |
+| .env.example generator | No | No | No | Yes |
+| CI exit codes | No | No | No | Yes |
+| Zero dependencies | - | No | No | Yes |
 
 ---
 
@@ -319,6 +328,14 @@ Contributions are welcome. Please open an issue first to discuss what you'd like
 5. Submit a pull request
 
 ---
+
+## Disclaimer
+
+django-env-doctor is an independent open source project and is not affiliated with, 
+endorsed by, or associated with the Django Software Foundation, Django, or any other 
+package mentioned in this documentation (django-environ, pydantic-settings, python-dotenv).
+
+Django is a registered trademark of the Django Software Foundation.
 
 ## License
 
